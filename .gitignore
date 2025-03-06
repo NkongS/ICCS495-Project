@@ -100,12 +100,4 @@ crashlytics-build.properties
 /[Ll]ibrary/GI/
 /[Ll]ibrary/Occlusion/
 
-/# Prevent committing sensitive Unity settings
-ProjectSettings/EditorBuildSettings.asset
-ProjectSettings/EditorSettings.asset
-ProjectSettings/GraphicsSettings.asset
-ProjectSettings/InputManager.asset
-ProjectSettings/NavMeshAreas.asset
-ProjectSettings/TagManager.asset
-ProjectSettings/TimeManager.asset
 
