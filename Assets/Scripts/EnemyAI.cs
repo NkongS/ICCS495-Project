@@ -12,15 +12,22 @@ public class EnemyAI : MonoBehaviour
     public float attackCooldown = 1f;
     private float nextAttackTime = 0f;
 
+    private PlayerController playerController;
+    private bool isDead = false;
+
+    void Start()
+    {
+        playerController = Object.FindFirstObjectByType<PlayerController>();
+    }
+
     void Update()
     {
-        if (player != null)
+        if (player != null && !isDead)
         {
             float distance = Vector3.Distance(transform.position, player.position);
 
             if (distance > attackRange)
             {
-                // Move towards the player
                 transform.position = Vector3.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
             }
             else
@@ -47,10 +54,23 @@ public class EnemyAI : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        if (isDead) return;
+
         health -= damage;
         if (health <= 0)
         {
-            Destroy(gameObject);
+            Die();
         }
+    }
+
+    void Die()
+    {
+        if (isDead) return;
+
+        isDead = true;
+
+        playerController.AddScore(100);
+
+        Destroy(gameObject);
     }
 }

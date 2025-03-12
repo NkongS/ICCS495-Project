@@ -1,6 +1,8 @@
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.InputSystem;
+using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -17,29 +19,61 @@ public class PlayerController : MonoBehaviour
 
     private bool isMoving = false;
 
+    private PlayerInputActions inputActions;
+
+    public int score = 0;
+    public TMP_Text scoreText;
+    public GameObject gameOverMenu;
+    public GameObject levelCompleteMenu;
+
+    void Awake()
+    {
+        inputActions = new PlayerInputActions();
+    }
+
+    void OnEnable()
+    {
+        inputActions.Player.Enable();
+        inputActions.Player.Move.performed += OnMove;
+        inputActions.Player.Attack.performed += OnAttack;
+    }
+
+    void OnDisable()
+    {
+        inputActions.Player.Move.performed -= OnMove;
+        inputActions.Player.Attack.performed -= OnAttack;
+        inputActions.Player.Disable();
+    }
+
     void Start()
     {
         currentHealth = maxHealth;
         healthBar.maxValue = maxHealth;
         healthBar.value = currentHealth;
+        UpdateScoreText();
+
+        gameOverMenu.SetActive(false);
+        levelCompleteMenu.SetActive(false);
     }
 
     void Update()
     {
         if (currentHealth <= 0) return;
+    }
 
+    private void OnMove(InputAction.CallbackContext context)
+    {
         if (!isMoving)
         {
-            if (Input.GetKeyDown(KeyCode.W)) StartCoroutine(Move(Vector3.forward));
-            if (Input.GetKeyDown(KeyCode.S)) StartCoroutine(Move(Vector3.back));
-            if (Input.GetKeyDown(KeyCode.A)) StartCoroutine(Move(Vector3.left));
-            if (Input.GetKeyDown(KeyCode.D)) StartCoroutine(Move(Vector3.right));
+            Vector2 input = context.ReadValue<Vector2>();
+            Vector3 direction = new Vector3(input.x, 0, input.y);
+            StartCoroutine(Move(direction));
         }
+    }
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Attack();
-        }
+    private void OnAttack(InputAction.CallbackContext context)
+    {
+        Attack();
     }
 
     private System.Collections.IEnumerator Move(Vector3 direction)
@@ -98,7 +132,10 @@ public class PlayerController : MonoBehaviour
         Rigidbody rb = GetComponent<Rigidbody>();
         rb.isKinematic = true;
 
-        Invoke("RestartGame", 2f);
+        inputActions.Player.Disable();
+
+        gameOverMenu.SetActive(true);
+        gameOverMenu.transform.Find("ScoreText").GetComponent<TMP_Text>().text = "Score: " + score;
     }
 
     void OnTriggerEnter(Collider other)
@@ -107,11 +144,38 @@ public class PlayerController : MonoBehaviour
         {
             Die();
         }
+        else if (other.CompareTag("End"))
+        {
+            LevelComplete();
+            Debug.Log("Level Complete!");
+        }
     }
 
-    void RestartGame()
+    public void RestartGame()
     {
+        Time.timeScale = 1f;
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
+    void LevelComplete()
+    {
+        Time.timeScale = 0f;
+
+        inputActions.Player.Disable();
+
+        levelCompleteMenu.SetActive(true);
+        levelCompleteMenu.transform.Find("ScoreText").GetComponent<TMP_Text>().text = "Score: " + score;
+    }
+
+    public void AddScore(int points)
+    {
+        score += points;
+        UpdateScoreText();
+    }
+
+    void UpdateScoreText()
+    {
+        scoreText.text = "Score: " + score;
+    }
 }
