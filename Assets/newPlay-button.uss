@@ -1,0 +1,35 @@
+.button-style {
+    height: 106px;
+    width: 352px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    -unity-font-definition: url("project://database/Assets/fonts/Game%20Bubble.ttf?fileID=12800000&guid=284e7a49ff9063345aa6c6ca41de8e57&type=3#Game Bubble");
+    color: rgb(105, 182, 89);
+    background-color: rgb(255, 246, 246);
+}
+
+.button-style:hover {
+    height: 106px;
+    width: 352px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    -unity-font-definition: url("project://database/Assets/fonts/Game%20Bubble.ttf?fileID=12800000&guid=284e7a49ff9063345aa6c6ca41de8e57&type=3#Game Bubble");
+    color: rgb(105, 182, 89);
+    background-color: rgb(255, 246, 246);
+}
+
+.button-style:active {
+    height: 106px;
+    width: 352px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    -unity-font-definition: url("project://database/Assets/fonts/Game%20Bubble.ttf?fileID=12800000&guid=284e7a49ff9063345aa6c6ca41de8e57&type=3#Game Bubble");
+    color: rgb(105, 182, 89);
+    background-color: rgb(255, 246, 246);
+}

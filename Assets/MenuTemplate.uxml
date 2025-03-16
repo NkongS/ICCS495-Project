@@ -1,8 +1,11 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/play%20button.uss?fileID=7433441132597879392&amp;guid=a32bdbb08d784704f9ef16b05618441c&amp;type=3#play button" />
-    <engine:VisualElement style="flex-grow: 1; align-items: center; justify-content: center; flex-direction: column; align-self: center; width: 639px; height: 280px; font-size: 14%; opacity: 1;">
-        <engine:Button text="PLAY" name="play-button" class="button-style" style="font-size: 60px;" />
-        <engine:Button text="OPTION" name="option-button" class="button-style" style="font-size: 60px;" />
-        <engine:Button text="EXIT" name="exit-button" class="button-style" style="font-size: 60px;" />
+    <Style src="project://database/Assets/newPlay-button.uss?fileID=7433441132597879392&amp;guid=b595ca5376a05554a80e3d8617701ff9&amp;type=3#newPlay-button" />
+    <engine:VisualElement style="flex-grow: 1; flex-direction: column; align-items: center; color: rgb(0, 0, 0); -unity-text-outline-color: rgba(0, 0, 0, 0); height: 0;">
+        <engine:Label text="WELCOME TO THE GAME" style="font-size: 100px; -unity-font-definition: url(&quot;project://database/Assets/fonts/Pokemon%20Hollow.ttf?fileID=12800000&amp;guid=fc5f2a15f61d35546b960085ab658651&amp;type=3#Pokemon Hollow&quot;); color: rgb(0, 0, 0);" />
+    </engine:VisualElement>
+    <engine:VisualElement style="flex-grow: 1; flex-direction: column-reverse; align-items: center; justify-content: flex-end; font-size: 80px;">
+        <engine:Button text="EXIT" name="exit-button" class="button-style" />
+        <engine:Button text="OPTION" name="option-button" class="button-style" style="-unity-text-align: upper-center;" />
+        <engine:Button text="PLAY" name="play-button" class="button-style" />
     </engine:VisualElement>
 </engine:UXML>
