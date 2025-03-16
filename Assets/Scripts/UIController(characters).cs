@@ -45,7 +45,7 @@ public class CharacterSelection : MonoBehaviour
         // PlayerPrefs.Save();
         // Debug.Log("Character " + (selectedCharacterIndex + 1) + " Selected!");
         // Optionally load the game scene
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("LevelSelectionScene");
     }
 
     void BackToMainMenu()
