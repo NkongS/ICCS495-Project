@@ -1,0 +1,26 @@
+.button-style1 {
+    height: 98px;
+    width: 296px;
+    font-size: 30px;
+    -unity-font-definition: url("project://database/Assets/fonts/SuperMario256.ttf?fileID=12800000&guid=fa283e5e133386748aa4a61f14b37564&type=3#SuperMario256");
+    -unity-text-outline-color: rgba(238, 238, 238, 0);
+    background-color: rgb(175, 193, 138);
+}
+
+.button-style1:active {
+    height: 98px;
+    width: 296px;
+    font-size: 30px;
+    -unity-font-definition: url("project://database/Assets/fonts/SuperMario256.ttf?fileID=12800000&guid=fa283e5e133386748aa4a61f14b37564&type=3#SuperMario256");
+    -unity-text-outline-color: rgba(238, 238, 238, 0);
+    background-color: rgb(175, 193, 138);
+}
+
+.button-style1:hover {
+    height: 98px;
+    width: 296px;
+    font-size: 30px;
+    -unity-font-definition: url("project://database/Assets/fonts/SuperMario256.ttf?fileID=12800000&guid=fa283e5e133386748aa4a61f14b37564&type=3#SuperMario256");
+    -unity-text-outline-color: rgba(238, 238, 238, 0);
+    background-color: rgb(175, 193, 138);
+}
