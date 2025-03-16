@@ -1,0 +1,56 @@
+.button-style {
+    -unity-text-align: middle-center;
+    border-top-width: 1px;
+    white-space: pre;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 129px;
+    height: 35px;
+    -unity-font-definition: url("project://database/Assets/fonts/Game%20Bubble.ttf?fileID=12800000&guid=284e7a49ff9063345aa6c6ca41de8e57&type=3#Game Bubble");
+    font-size: 25px;
+    text-overflow: clip;
+}
+
+.button-style:hover {
+    -unity-text-align: middle-center;
+    border-top-width: 1px;
+    white-space: pre;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 129px;
+    height: 35px;
+    -unity-font-definition: url("project://database/Assets/fonts/Game%20Bubble.ttf?fileID=12800000&guid=284e7a49ff9063345aa6c6ca41de8e57&type=3#Game Bubble");
+    font-size: 25px;
+    text-overflow: clip;
+}
+
+.button-style:active {
+    -unity-text-align: middle-center;
+    border-top-width: 1px;
+    white-space: pre;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 129px;
+    height: 35px;
+    -unity-font-definition: url("project://database/Assets/fonts/Game%20Bubble.ttf?fileID=12800000&guid=284e7a49ff9063345aa6c6ca41de8e57&type=3#Game Bubble");
+    font-size: 25px;
+    text-overflow: clip;
+}
+
+.button-style {
+    font-size: 80px;
+    white-space: pre;
+    background-color: rgb(145, 105, 127);
+    height: 92px;
+    width: 330px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}

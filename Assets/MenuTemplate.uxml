@@ -1,0 +1,8 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/play%20button.uss?fileID=7433441132597879392&amp;guid=a32bdbb08d784704f9ef16b05618441c&amp;type=3#play button" />
+    <engine:VisualElement style="flex-grow: 1; align-items: center; justify-content: center; flex-direction: column; align-self: center; width: 639px; height: 280px; font-size: 14%; opacity: 1;">
+        <engine:Button text="PLAY" name="play-button" class="button-style" style="font-size: 60px;" />
+        <engine:Button text="OPTION" name="option-button" class="button-style" style="font-size: 60px;" />
+        <engine:Button text="EXIT" name="exit-button" class="button-style" style="font-size: 60px;" />
+    </engine:VisualElement>
+</engine:UXML>
