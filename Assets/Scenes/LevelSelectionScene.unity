@@ -424,8 +424,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 64e9568186d20a14d894b37bdfcf94da, type: 3}
   m_Resource: {fileID: 8300000, guid: 64e9568186d20a14d894b37bdfcf94da, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_PlayOnAwake: 0
+  m_Volume: 0.713
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -553,8 +553,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8fa6dd4cf1312c846b547ac1b2ad82d5, type: 3}
   m_Resource: {fileID: 8300000, guid: 8fa6dd4cf1312c846b547ac1b2ad82d5, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_PlayOnAwake: 0
+  m_Volume: 0.129
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -750,6 +750,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1916737494}
   - component: {fileID: 1916737493}
+  - component: {fileID: 1916737495}
   m_Layer: 5
   m_Name: UIDocument
   m_TagString: Untagged
@@ -791,6 +792,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1916737495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1916737492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a034f01820111f46a0ca4956b54c262, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backgroundSound: {fileID: 1322601455}
+  HoverSound: {fileID: 656872768}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
