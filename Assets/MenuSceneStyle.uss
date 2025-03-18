@@ -1,0 +1,78 @@
+.header {
+    font-size: 50px;
+}
+
+.play-button-style {
+    width: 424px;
+    height: 153px;
+    font-size: 60px;
+    background-image: url("project://database/Assets/sprites/4Z_2101.w017.n001.354B.p15.354.png?fileID=318538337&guid=52558e29a014b4444a165b7cee8abdf5&type=3#4Z_2101.w017.n001.354B.p15.354_2");
+    -unity-background-scale-mode: stretch-to-fill;
+    background-position-x: center 0;
+    background-position-y: center 0;
+    border-top-right-radius: 77px;
+    border-top-left-radius: 77px;
+    border-bottom-left-radius: 77px;
+    border-bottom-right-radius: 77px;
+    border-bottom-width: 3px;
+    border-top-width: 3px;
+    border-right-width: 10px;
+    border-left-width: 10px;
+    -unity-font-definition: url("project://database/Assets/fonts/SuperMario256.ttf?fileID=12800000&guid=fa283e5e133386748aa4a61f14b37564&type=3#SuperMario256");
+    -unity-font-style: normal;
+    color: rgb(90, 20, 57);
+    position: absolute;
+    top: 408px;
+    left: 774px;
+    transition-duration: 0.35s;
+}
+
+.play-button-style:hover {
+    width: 424px;
+    height: 153px;
+    font-size: 60px;
+    background-image: url("project://database/Assets/sprites/4Z_2101.w017.n001.354B.p15.354.png?fileID=318538337&guid=52558e29a014b4444a165b7cee8abdf5&type=3#4Z_2101.w017.n001.354B.p15.354_2");
+    -unity-background-scale-mode: stretch-to-fill;
+    background-position-x: center 0;
+    background-position-y: center 0;
+    border-top-right-radius: 77px;
+    border-top-left-radius: 77px;
+    border-bottom-left-radius: 77px;
+    border-bottom-right-radius: 77px;
+    border-bottom-width: 3px;
+    border-top-width: 3px;
+    border-right-width: 10px;
+    border-left-width: 10px;
+    -unity-font-definition: url("project://database/Assets/fonts/SuperMario256.ttf?fileID=12800000&guid=fa283e5e133386748aa4a61f14b37564&type=3#SuperMario256");
+    -unity-font-style: normal;
+    color: rgb(199, 80, 80);
+    position: absolute;
+    top: 408px;
+    left: 774px;
+    scale: 1.1 1.1;
+    -unity-background-image-tint-color: rgb(180, 74, 74);
+}
+
+.play-button-style:active {
+    width: 424px;
+    height: 153px;
+    font-size: 60px;
+    background-image: url("project://database/Assets/sprites/4Z_2101.w017.n001.354B.p15.354.png?fileID=318538337&guid=52558e29a014b4444a165b7cee8abdf5&type=3#4Z_2101.w017.n001.354B.p15.354_2");
+    -unity-background-scale-mode: stretch-to-fill;
+    background-position-x: center 0;
+    background-position-y: center 0;
+    border-top-right-radius: 77px;
+    border-top-left-radius: 77px;
+    border-bottom-left-radius: 77px;
+    border-bottom-right-radius: 77px;
+    border-bottom-width: 3px;
+    border-top-width: 3px;
+    border-right-width: 10px;
+    border-left-width: 10px;
+    -unity-font-definition: url("project://database/Assets/fonts/SuperMario256.ttf?fileID=12800000&guid=fa283e5e133386748aa4a61f14b37564&type=3#SuperMario256");
+    -unity-font-style: normal;
+    color: rgb(120, 62, 76);
+    position: absolute;
+    top: 408px;
+    left: 774px;
+}
