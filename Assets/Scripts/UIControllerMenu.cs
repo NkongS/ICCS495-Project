@@ -11,6 +11,7 @@ public class UIController : MonoBehaviour
     public Button DecreaseVolButton;
 
     public AudioSource backgroundSound;
+    public AudioSource buttonSound;
     void Start()
     {
         var root = GetComponent<UIDocument>().rootVisualElement;
@@ -25,6 +26,17 @@ public class UIController : MonoBehaviour
         quitButton.clicked += quitButtonPressed;
         IncreaseVolButton.clicked += IncreaseVolume;
         DecreaseVolButton.clicked += DecreaseVolume;
+
+        AddHoverSound(playButton);
+        AddHoverSound(guideButton);
+        AddHoverSound(quitButton);
+        AddHoverSound(IncreaseVolButton);
+        AddHoverSound(DecreaseVolButton);
+    }
+
+    void AddHoverSound(VisualElement button)
+    {
+        button.RegisterCallback<PointerEnterEvent>(evt => PlayButtonSound(0.2f));
     }
 
     void playButtonPressed() 
@@ -57,4 +69,20 @@ public class UIController : MonoBehaviour
             backgroundSound.Stop();
         }
     }
+
+    void PlayButtonSound(float startTime = 0f)
+    {
+    if (buttonSound != null)
+    {
+        if (startTime > 0f && startTime < buttonSound.clip.length)
+        {
+            buttonSound.time = startTime;
+        }
+        buttonSound.Play();
+    }
+    else
+    {
+        Debug.LogError("Button sound is not assigned!");
+    }
+}
 }
