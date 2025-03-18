@@ -404,6 +404,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: 4Z_2101.w017.n001.354B.p15.354_14
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1266
+        width: 369
+        height: 396
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bc346d6dc6be994e82bceb591a14817
+      internalID: -1173600907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -424,6 +446,7 @@ TextureImporter:
       4Z_2101.w017.n001.354B.p15.354_11: 2051233034
       4Z_2101.w017.n001.354B.p15.354_12: -1650112753
       4Z_2101.w017.n001.354B.p15.354_13: -379741090
+      4Z_2101.w017.n001.354B.p15.354_14: -1173600907
       4Z_2101.w017.n001.354B.p15.354_2: 318538337
       4Z_2101.w017.n001.354B.p15.354_3: -825516184
       4Z_2101.w017.n001.354B.p15.354_4: 1238020415

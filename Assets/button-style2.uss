@@ -1,0 +1,58 @@
+.button-style2 {
+    position: absolute;
+    top: 464px;
+    left: 377px;
+    height: 324px;
+    width: 386px;
+    border-top-left-radius: 31px;
+    border-top-right-radius: 34px;
+    border-bottom-left-radius: 51px;
+    border-bottom-right-radius: 69px;
+    background-image: url("project://database/Assets/sprites/4Z_2101.w017.n001.354B.p15.354.png?fileID=1448090297&guid=52558e29a014b4444a165b7cee8abdf5&type=3#4Z_2101.w017.n001.354B.p15.354_1");
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    background-color: rgba(188, 188, 188, 0);
+    border-left-color: rgba(149, 149, 149, 0);
+    border-right-color: rgba(149, 149, 149, 0);
+    border-top-color: rgba(149, 149, 149, 0);
+    border-bottom-color: rgba(149, 149, 149, 0);
+    transition-duration: 0.35s;
+}
+
+.button-style2:hover {
+    position: absolute;
+    top: 464px;
+    left: 377px;
+    height: 324px;
+    width: 386px;
+    border-top-left-radius: 31px;
+    border-top-right-radius: 34px;
+    border-bottom-left-radius: 51px;
+    border-bottom-right-radius: 69px;
+    background-image: url("project://database/Assets/sprites/4Z_2101.w017.n001.354B.p15.354.png?fileID=1448090297&guid=52558e29a014b4444a165b7cee8abdf5&type=3#4Z_2101.w017.n001.354B.p15.354_1");
+    -unity-background-image-tint-color: rgb(199, 66, 66);
+    background-color: rgba(188, 188, 188, 0);
+    border-left-color: rgba(149, 149, 149, 0);
+    border-right-color: rgba(149, 149, 149, 0);
+    border-top-color: rgba(149, 149, 149, 0);
+    border-bottom-color: rgba(149, 149, 149, 0);
+    scale: 1.1 1.1;
+}
+
+.button-style2:active {
+    position: absolute;
+    top: 464px;
+    left: 377px;
+    height: 324px;
+    width: 386px;
+    border-top-left-radius: 31px;
+    border-top-right-radius: 34px;
+    border-bottom-left-radius: 51px;
+    border-bottom-right-radius: 69px;
+    background-image: url("project://database/Assets/sprites/4Z_2101.w017.n001.354B.p15.354.png?fileID=1448090297&guid=52558e29a014b4444a165b7cee8abdf5&type=3#4Z_2101.w017.n001.354B.p15.354_1");
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    background-color: rgba(188, 188, 188, 0);
+    border-left-color: rgba(149, 149, 149, 0);
+    border-right-color: rgba(149, 149, 149, 0);
+    border-top-color: rgba(149, 149, 149, 0);
+    border-bottom-color: rgba(149, 149, 149, 0);
+}
