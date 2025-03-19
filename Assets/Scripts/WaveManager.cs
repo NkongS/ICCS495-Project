@@ -123,7 +123,7 @@ public class WaveManager : MonoBehaviour
     {
         if (carSpawnPoints.Length == 0) return;
         Transform spawnPoint = carSpawnPoints[Random.Range(0, carSpawnPoints.Length)];
-        Instantiate(carPrefab, spawnPoint.position, Quaternion.identity);
+        Instantiate(carPrefab, spawnPoint.position, carPrefab.transform.rotation);
     }
 
     IEnumerator SpawnLogs()

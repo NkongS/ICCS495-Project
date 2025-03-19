@@ -67,6 +67,13 @@ public class PlayerController : MonoBehaviour
         {
             Vector2 input = context.ReadValue<Vector2>();
             Vector3 direction = new Vector3(input.x, 0, input.y);
+
+            if (direction != Vector3.zero)
+            {
+                Quaternion targetRotation = Quaternion.LookRotation(direction, Vector3.up);
+                transform.rotation = targetRotation;
+            }
+
             StartCoroutine(Move(direction));
         }
     }
@@ -156,6 +163,13 @@ public class PlayerController : MonoBehaviour
         Time.timeScale = 1f;
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void ReturnToMainMenu()
+    {
+        Time.timeScale = 1f;
+
+        SceneManager.LoadScene(0);
     }
 
     void LevelComplete()

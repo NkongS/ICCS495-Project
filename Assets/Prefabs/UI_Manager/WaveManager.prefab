@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3134692501165463082
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2693134651504167233}
+  - component: {fileID: 8488222575106165984}
+  m_Layer: 0
+  m_Name: WaveManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2693134651504167233
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3134692501165463082}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8488222575106165984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3134692501165463082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e32fc66746dad8e45810c04120263005, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 7653505995286825732, guid: 7def873f122656c40909781b2c72038a, type: 3}
+  carPrefab: {fileID: 3958337068349499990, guid: 5b851e84d2b50f945aa23c3329d1791a, type: 3}
+  logPrefab: {fileID: 7033462724163878493, guid: 17003572483631344944cfedfb8ec787, type: 3}
+  levelSegmentPrefab: {fileID: 2382870990775545799, guid: 6098bd0a36745794399c74bb2ae20851, type: 3}
+  endingPlatformPrefab: {fileID: 7739113835408018148, guid: 92470683f665d2548a9c76d7beb97948, type: 3}
+  player: {fileID: 0}
+  enemySpawnPoints: []
+  carSpawnPoints: []
+  logSpawnPoints: []
+  waveNumber: 1
+  timeBetweenWaves: 30
+  enemiesPerWave: 20
+  enemiesAlive: 0
+  levelSegments: 5
