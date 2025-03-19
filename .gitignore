@@ -77,7 +77,6 @@ crashlytics-build.properties
 
 # Exclude large auto-generated files (GitHub 100MB limit)
 *.rcc
-*.asset
 *.tga
 *.tif
 *.raw
