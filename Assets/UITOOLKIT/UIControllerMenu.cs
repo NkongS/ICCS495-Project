@@ -46,7 +46,7 @@ public class UIController : MonoBehaviour
 
     void guideButtonPressed() 
     {
-        SceneManager.LoadScene("HowToPlay");
+        SceneManager.LoadScene("GuideScene");
     }
 
     void quitButtonPressed() 
