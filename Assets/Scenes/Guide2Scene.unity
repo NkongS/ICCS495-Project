@@ -373,6 +373,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5032442011183919870, guid: 2dd8426aefbafc5429e2a6185382a1fc, type: 3}
+      propertyPath: sourceAsset
+      value: 
+      objectReference: {fileID: 9197481963319205126, guid: 1cb83bce1232d7847b17574e52dc19ab, type: 3}
     - target: {fileID: 7186574085811933477, guid: 2dd8426aefbafc5429e2a6185382a1fc, type: 3}
       propertyPath: m_Name
       value: UIDocument
