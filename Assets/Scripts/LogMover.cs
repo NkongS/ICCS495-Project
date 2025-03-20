@@ -3,7 +3,7 @@ using System.Collections;
 
 public class LogMover : MonoBehaviour
 {
-    public float speed = 5f;
+    public float speed = 10f;
     private float destructionThreshold;
 
     void Start()
@@ -17,7 +17,14 @@ public class LogMover : MonoBehaviour
 
         if (transform.position.x >= destructionThreshold)
         {
+        if (Random.value < 0.5f)
+        {
             Destroy(gameObject);
+        }
+        else
+        {
+            transform.position = new Vector3(transform.position.x - 250f, transform.position.y, transform.position.z); // Move back to spawn point
+        }
         }
     }
 

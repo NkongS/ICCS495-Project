@@ -52,6 +52,14 @@ public class WaveManager : MonoBehaviour
             Vector3 position = startPosition + new Vector3(0, 0, i * (segmentLength + offset)); 
             GameObject segment = Instantiate(levelSegmentPrefab, position, Quaternion.identity);
 
+            Transform bridge = segment.transform.Find("Bridge");
+            if (bridge != null)
+            {
+                float randomX = Random.Range(-60f, 60f);
+                Vector3 bridgePosition = bridge.localPosition;
+                bridge.localPosition = new Vector3(randomX, bridgePosition.y, bridgePosition.z);
+            }
+
             enemySpawnPoints = CombineArrays(enemySpawnPoints, segment.GetComponentsInChildren<Transform>().Where(t => t.CompareTag("EnemySpawnPoint")).ToArray());
             carSpawnPoints = CombineArrays(carSpawnPoints, segment.GetComponentsInChildren<Transform>().Where(t => t.CompareTag("CarSpawnPoint")).ToArray());
             logSpawnPoints = CombineArrays(logSpawnPoints, segment.GetComponentsInChildren<Transform>().Where(t => t.CompareTag("LogSpawnPoint")).ToArray());
