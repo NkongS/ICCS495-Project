@@ -6,9 +6,11 @@ public class CarMover : MonoBehaviour
     public float speed = 10f;
     private float destructionThreshold;
 
+    private float dist = 200f;
+
     void Start()
     {
-        destructionThreshold = transform.position.x + 250f;
+        destructionThreshold = transform.position.x + dist;
     }
 
     void Update()
@@ -17,7 +19,14 @@ public class CarMover : MonoBehaviour
 
         if (transform.position.x >= destructionThreshold)
         {
-            Destroy(gameObject);
+            if (Random.value < 0.3f)
+            {
+                Destroy(gameObject);
+            }
+            else
+            {
+                transform.position = new Vector3(transform.position.x - dist, transform.position.y, transform.position.z);
+            }
         }
     }
 

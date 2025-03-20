@@ -54,7 +54,8 @@ public class UIControllerLevelSelection : MonoBehaviour
 
     void levelOneButtonPressed() 
     {
-        SceneManager.LoadScene("LevelOne");
+        SceneManager.LoadScene("Main");
+        Debug.Log("Level One Button Pressed");
     }
 
     void levelTwoButtonPressed() 
