@@ -383,7 +383,7 @@ PrefabInstance:
     - target: {fileID: 5032442011183919870, guid: 2dd8426aefbafc5429e2a6185382a1fc, type: 3}
       propertyPath: m_PanelSettings
       value: 
-      objectReference: {fileID: 11400000, guid: d70088f1f7b3bc447bd29c147d23e193, type: 2}
+      objectReference: {fileID: 11400000, guid: e1804e3d85c3a244aab4c89a1c6b062b, type: 2}
     - target: {fileID: 6777359473105877053, guid: 2dd8426aefbafc5429e2a6185382a1fc, type: 3}
       propertyPath: HoverSound
       value: 
