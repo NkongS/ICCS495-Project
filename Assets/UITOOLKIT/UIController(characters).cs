@@ -5,7 +5,9 @@ using UnityEngine.SceneManagement;
 public class CharacterSelection : MonoBehaviour
 {
 
-    public Button selectButton;
+    public Button selectButtonOne;
+    public Button selectButtonTwo;
+    public Button selectButtonThree;
     public Button backButton;
 
     public AudioSource backgroundSound;
@@ -14,13 +16,19 @@ public class CharacterSelection : MonoBehaviour
     void Start()
     {
         var root = GetComponent<UIDocument>().rootVisualElement;
-        selectButton = root.Q<Button>("selectOne-button");
+        selectButtonOne = root.Q<Button>("selectOne-button");
+        selectButtonTwo = root.Q<Button>("selectTwo-button");
+        selectButtonThree = root.Q<Button>("selectThree-button");
         backButton = root.Q<Button>("home-button");
 
-        selectButton.clicked += selectButtonPressed;
+        selectButtonOne.clicked += selectButtonPressed;
+        selectButtonTwo.clicked += selectButtonPressed;
+        selectButtonThree.clicked += selectButtonPressed;
         backButton.clicked += homeButtonPressed;
 
-        AddHoverSound(selectButton);
+        AddHoverSound(selectButtonOne);
+        AddHoverSound(selectButtonTwo);
+        AddHoverSound(selectButtonThree);
         AddHoverSound(backButton);  
     }
 
