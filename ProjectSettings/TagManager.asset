@@ -10,6 +10,7 @@ TagManager:
   - CarSpawnPoint
   - LogSpawnPoint
   - End
+  - PlayerSpawnPoint
   layers:
   - Default
   - TransparentFX

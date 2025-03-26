@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     public TMP_Text scoreText;
     public GameObject gameOverMenu;
     public GameObject levelCompleteMenu;
+    public GameObject[] characterModels;
 
     void Awake()
     {
@@ -47,6 +48,18 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        if (healthBar == null)
+            healthBar = GameObject.Find("HealthBar").GetComponent<Slider>();
+
+        if (scoreText == null)
+            scoreText = GameObject.Find("ScoreText").GetComponent<TMP_Text>();
+
+        if (gameOverMenu == null)
+            gameOverMenu = GameObject.Find("GameOverMenu");
+
+        if (levelCompleteMenu == null)
+            levelCompleteMenu = GameObject.Find("LevelCompleteMenu");
+            
         currentHealth = maxHealth;
         healthBar.maxValue = maxHealth;
         healthBar.value = currentHealth;
@@ -54,11 +67,23 @@ public class PlayerController : MonoBehaviour
 
         gameOverMenu.SetActive(false);
         levelCompleteMenu.SetActive(false);
+
+        ActivateSelectedCharacter();
     }
 
     void Update()
     {
         if (currentHealth <= 0) return;
+    }
+
+    void ActivateSelectedCharacter()
+    {
+        int selectedCharacter = PlayerPrefs.GetInt("SelectedCharacter", 0); // Default to Character 1
+
+        for (int i = 0; i < characterModels.Length; i++)
+        {
+            characterModels[i].SetActive(i == selectedCharacter);
+        }
     }
 
     private void OnMove(InputAction.CallbackContext context)
@@ -163,6 +188,13 @@ public class PlayerController : MonoBehaviour
         Time.timeScale = 1f;
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void LevelSelecter()
+    {
+        Time.timeScale = 1f;
+
+        SceneManager.LoadScene("LevelSelectionScene");
     }
 
     public void ReturnToMainMenu()

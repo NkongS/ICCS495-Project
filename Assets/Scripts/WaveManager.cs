@@ -9,6 +9,9 @@ public class WaveManager : MonoBehaviour
     public GameObject logPrefab;
     public GameObject levelSegmentPrefab;
     public GameObject endingPlatformPrefab;
+    public GameObject beginningPlatformPrefab;
+    public GameObject playerPrefab;
+    public GameObject cameraHolder;
     public Transform player;
     public Transform[] enemySpawnPoints;
     public Transform[] carSpawnPoints;
@@ -43,6 +46,41 @@ public class WaveManager : MonoBehaviour
         float offset = 10f; 
         Vector3 startPosition = Vector3.zero;
 
+        Vector3 beginningPosition = startPosition + new Vector3(0, 3.194906f, -segmentLength - offset - 5.5f);
+        GameObject beginningPlatform = Instantiate(beginningPlatformPrefab, beginningPosition, Quaternion.identity);
+
+        Transform playerSpawnPoint = beginningPlatform.transform.Find("PlayerSpawnPoint");
+        if (playerSpawnPoint != null)
+        {
+            if (playerPrefab != null)
+            {
+                GameObject playerInstance = Instantiate(playerPrefab, playerSpawnPoint.position, Quaternion.identity);
+                player = playerInstance.transform;
+
+                CameraFollow cameraFollow = cameraHolder.GetComponent<CameraFollow>();
+                if (cameraFollow != null)
+                {
+                    cameraFollow.player = player;
+                }
+                else
+                {
+                    Debug.LogError("CameraFollow script not found on the CameraHolder.");
+                }
+            }
+            else if (player != null)
+            {
+                player.position = playerSpawnPoint.position;
+            }
+            else
+            {
+                Debug.LogError("PlayerPrefab or Player Transform is not assigned.");
+            }
+        }
+        else
+        {
+            Debug.LogError("PlayerSpawnPoint not found on the beginning platform.");
+        }
+
         enemySpawnPoints = new Transform[0];
         carSpawnPoints = new Transform[0];
         logSpawnPoints = new Transform[0];
@@ -65,7 +103,7 @@ public class WaveManager : MonoBehaviour
             logSpawnPoints = CombineArrays(logSpawnPoints, segment.GetComponentsInChildren<Transform>().Where(t => t.CompareTag("LogSpawnPoint")).ToArray());
         }
 
-        Vector3 endingPosition = startPosition + new Vector3(-18.5f, 3.2f, levelSegments * segmentLength + offset + 4); 
+        Vector3 endingPosition = startPosition + new Vector3(-18.5f, 3.2f, levelSegments * segmentLength + offset + 34); 
         Instantiate(endingPlatformPrefab, endingPosition, Quaternion.identity);
     }
 

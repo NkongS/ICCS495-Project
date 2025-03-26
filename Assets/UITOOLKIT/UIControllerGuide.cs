@@ -30,7 +30,7 @@ public class UIControllerGuide : MonoBehaviour
 
     void forwardButtonPressed()
     {
-        SceneManager.LoadScene("NextGuideScene");
+        SceneManager.LoadScene("Guide2Scene");
     }
 
     void homeButtonPressed()

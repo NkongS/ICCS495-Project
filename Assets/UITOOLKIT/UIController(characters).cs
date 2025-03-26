@@ -21,9 +21,9 @@ public class CharacterSelection : MonoBehaviour
         selectButtonThree = root.Q<Button>("selectThree-button");
         backButton = root.Q<Button>("home-button");
 
-        selectButtonOne.clicked += selectButtonPressed;
-        selectButtonTwo.clicked += selectButtonPressed;
-        selectButtonThree.clicked += selectButtonPressed;
+        selectButtonOne.clicked += () => selectButtonPressed(0); // Character 1
+        selectButtonTwo.clicked += () => selectButtonPressed(1); // Character 2
+        selectButtonThree.clicked += () => selectButtonPressed(2); // Character 3
         backButton.clicked += homeButtonPressed;
 
         AddHoverSound(selectButtonOne);
@@ -37,8 +37,11 @@ public class CharacterSelection : MonoBehaviour
         button.RegisterCallback<PointerEnterEvent>(evt => HoverSoundOn());
     }
 
-    void selectButtonPressed()
+    void selectButtonPressed(int characterIndex)
     {
+        PlayerPrefs.SetInt("SelectedCharacter", characterIndex);
+        PlayerPrefs.Save();
+
         SceneManager.LoadScene("LevelSelectionScene");
     }
 
