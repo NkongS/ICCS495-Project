@@ -30,7 +30,6 @@ public class UIControllerLevelSelection : MonoBehaviour
 
         levelOneButton.clicked += levelOneButtonPressed;
         levelTwoButton.clicked += levelTwoButtonPressed;
-        levelThreeButton.clicked += levelThreeButtonPressed;
 
         HomeButton.clicked += homeButtonPressed;
         BackButton.clicked += backButtonPressed;
@@ -40,7 +39,6 @@ public class UIControllerLevelSelection : MonoBehaviour
 
         AddHoverSound(levelOneButton);
         AddHoverSound(levelTwoButton);
-        AddHoverSound(levelThreeButton);
         AddHoverSound(HomeButton);
         AddHoverSound(BackButton);
         AddHoverSound(SoundOnButton);
@@ -63,10 +61,6 @@ public class UIControllerLevelSelection : MonoBehaviour
         SceneManager.LoadScene("LevelTwo");
     }
 
-    void levelThreeButtonPressed() 
-    {
-        SceneManager.LoadScene("LevelThree");
-    }
 
     void homeButtonPressed() 
     {
