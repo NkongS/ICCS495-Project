@@ -28,6 +28,10 @@ public class EnemyAI : MonoBehaviour
 
             if (distance > attackRange)
             {
+                Vector3 direction = (player.position - transform.position).normalized;
+                Quaternion lookRotation = Quaternion.LookRotation(direction);
+                transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
+                
                 transform.position = Vector3.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
             }
             else

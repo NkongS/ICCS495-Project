@@ -11,6 +11,7 @@ TagManager:
   - LogSpawnPoint
   - End
   - PlayerSpawnPoint
+  - Enemy
   layers:
   - Default
   - TransparentFX
