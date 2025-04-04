@@ -136,7 +136,7 @@ public class PlayerController : MonoBehaviour
         }
 
         Vector3 startPosition = transform.position;
-        Vector3 targetPosition = startPosition + (direction * moveDistance);
+        Vector3 targetPosition = startPosition + (direction * moveDistance) + new Vector3(0, 0.15f, 0);
         float elapsedTime = 0;
 
         while (elapsedTime < (moveDistance / moveSpeed))
