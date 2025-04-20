@@ -34,6 +34,9 @@ public class PlayerController : MonoBehaviour
     private float shieldDuration = 2.5f; // Duration the shield stays active
     private GameObject activeShield; // Reference to the active shield
 
+    private Animator[] animators;
+    private Animator activeAnimator;
+
     private Vector3 moveDirection = Vector3.zero;
 
     void Awake()
@@ -79,6 +82,12 @@ public class PlayerController : MonoBehaviour
         gameOverMenu.SetActive(false);
         levelCompleteMenu.SetActive(false);
 
+        animators = new Animator[characterModels.Length];
+        for (int i = 0; i < characterModels.Length; i++)
+        {
+            animators[i] = characterModels[i].GetComponent<Animator>();
+        }
+
         ActivateSelectedCharacter();
     }
 
@@ -99,7 +108,13 @@ public class PlayerController : MonoBehaviour
 
         for (int i = 0; i < characterModels.Length; i++)
         {
-            characterModels[i].SetActive(i == selectedCharacter);
+            bool isActive = i == selectedCharacter;
+            characterModels[i].SetActive(isActive);
+
+            if (isActive)
+            {
+                activeAnimator = animators[i];
+            }
         }
     }
 
@@ -129,6 +144,11 @@ public class PlayerController : MonoBehaviour
     {
         isMoving = true;
 
+        if (activeAnimator != null)
+        {
+            activeAnimator.SetBool("isMoving", true);
+        }
+
         if (direction != Vector3.zero)
         {
             Quaternion targetRotation = Quaternion.LookRotation(direction, Vector3.up);
@@ -148,6 +168,11 @@ public class PlayerController : MonoBehaviour
 
         transform.position = targetPosition;
         isMoving = false;
+
+        if (activeAnimator != null)
+        {
+            activeAnimator.SetBool("isMoving", false);
+        }
     }
 
     void Attack()
@@ -286,7 +311,12 @@ public class PlayerController : MonoBehaviour
     public void Die()
     {
         Debug.Log("Player Died!");
-        // Death animation/effects
+
+        if (activeAnimator != null)
+        {
+            activeAnimator.SetBool("isDead", true);
+        }
+
         currentHealth = 0;
         healthBar.value = currentHealth;
 

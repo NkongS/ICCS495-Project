@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 public class UIControllerLevelSelection : MonoBehaviour
 {
     public Button levelOneButton;
-    public Button levelTwoButton;
-    public Button levelThreeButton;
+    // public Button levelTwoButton;
+    // public Button levelThreeButton;
     public Button SoundOnButton;
     public Button SoundOffButton;
     public Button HomeButton;
@@ -18,8 +18,8 @@ public class UIControllerLevelSelection : MonoBehaviour
     {
         var root = GetComponent<UIDocument>().rootVisualElement;
         levelOneButton = root.Q<Button>("levelOne-button");
-        levelTwoButton = root.Q<Button>("levelTwo-button");
-        levelThreeButton = root.Q<Button>("levelThree-button");
+        // levelTwoButton = root.Q<Button>("levelTwo-button");
+        // levelThreeButton = root.Q<Button>("levelThree-button");
 
         HomeButton = root.Q<Button>("home-button");
         BackButton = root.Q<Button>("back-button");
@@ -29,7 +29,7 @@ public class UIControllerLevelSelection : MonoBehaviour
 
 
         levelOneButton.clicked += levelOneButtonPressed;
-        levelTwoButton.clicked += levelTwoButtonPressed;
+        // levelTwoButton.clicked += levelTwoButtonPressed;
 
         HomeButton.clicked += homeButtonPressed;
         BackButton.clicked += backButtonPressed;
@@ -38,7 +38,7 @@ public class UIControllerLevelSelection : MonoBehaviour
         SoundOffButton.clicked += SoundOffButtonPressed;
 
         AddHoverSound(levelOneButton);
-        AddHoverSound(levelTwoButton);
+        // AddHoverSound(levelTwoButton);
         AddHoverSound(HomeButton);
         AddHoverSound(BackButton);
         AddHoverSound(SoundOnButton);
@@ -56,10 +56,10 @@ public class UIControllerLevelSelection : MonoBehaviour
         Debug.Log("Level One Button Pressed");
     }
 
-    void levelTwoButtonPressed() 
-    {
-        SceneManager.LoadScene("LevelTwo");
-    }
+    // void levelTwoButtonPressed() 
+    // {
+    //     SceneManager.LoadScene("LevelTwo");
+    // }
 
 
     void homeButtonPressed() 
